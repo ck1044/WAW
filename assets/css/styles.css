@@ -28,22 +28,31 @@
 
 .a1 {
     filter: brightness(100%);
-    padding-right: 5px;
-    padding-left: 5px;
     color: rgb(0, 0, 0);
     margin-right: 8px;
     margin-left: 8px;
     font-size: 26px;
+    text-decoration:none;
+    display:inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    line-height:inherit;
+    white-space:nowrap;
+
 }
 
 .a2{
     filter: brightness(100%);
+    color: rgb(0, 0, 0);
     padding-right: 5px;
     padding-left: 5px;
     font-size: 24px;
-    color: rgb(0, 0, 0);
     margin-right: 8px;
     margin-left: 8px;
+    line-height:inherit;
+    white-space:nowrap;
+    text-decoration:none;
+    display:inline-block;
 }
 
 .nav-input {
@@ -74,4 +83,50 @@
 .intro-div {
     width: auto;
     height: auto;
+}
+
+.detail-div {
+    justify-content: center;
+    cursor: zoom-out;
+    display: flex;
+    width: 100%;
+}
+.ct {
+    max-width: 1050px;
+    margin-bottom: 32px;
+}
+
+.ct1 {
+    height: 100%;
+    width: 100%;
+    border-radius: 32px;
+    cursor: auto;
+    max-width: 508px;
+    position: relative;
+}
+.ct2 {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 20px 0px;
+    border-radius: 32px;
+    flex-direction: column;
+}
+
+.divform {
+    margin-bottom: 32px;
+    justify-content: center;
+    max-width: 1050px;
+    margin-top: 32px;
+    background: rgb(255, 255, 255);
+    padding: 24px;
+    border-radius: 24px;
+    height: 100%;
+}
+
+.forminput {
+    border-radius: 25px;
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+    transition: none;
 }
