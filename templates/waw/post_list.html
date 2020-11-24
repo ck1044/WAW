@@ -1,9 +1,11 @@
+{% load static%}
 {% if post_list %}
     <div>
     {% for post in post_list %}
         <div class="card">
+
             <a href="{% url 'waw:detail' post.id %}">{{ post.content }}</a>
-            <a href="/waw/?kw={{ post.hash_tag }}">{{ post.hash_tag }}</a>
+            <a href="waw/?kw={{ post.hash_tag }}">{{ post.hash_tag }}</a>
         </div>
     {% endfor %}
     </div>
