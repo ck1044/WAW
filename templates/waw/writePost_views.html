@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="waw 소개" content="about WHO project">
+    <title>waw</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/Animated-Typing-With-Blinking.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/F19537---Timeline.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/Footer-Clean.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/Highlight-Blue.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+    <script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/Animated-Typing-With-Blinking.js"></script>
+</head>
+<body>
+    <!-- 네비게이션 시작 -->
+    <div class="nav-s">
+        <div class="nav-s1">
+            <a class="a1" href="intro_views.html">WAW</a>
+            <a class="a2" href="index.html">Home</a>
+                <input class="nav-input" type="search">
+            <a href="writePost_views.html"><i class="fa fa-pencil-square-o"></i></a>
+            <a class="btn btn-light text-center action-button" role="button" href="login_views.html">K</a>
+        </div>
+    </div>
+    <!-- 네비게이션 끝 -->
+    <div style="justify-content: center;display: flex;overflow: auto;background: rgb(239,239,239);align-items: center;top: 80px;left: 0;right: 0;bottom: 0;position: fixed;">
+        <div style="height: 100%;position: relative;background: #efefef;width: 880px;">
+            <div class="divform">
+                <form action = "../../waw/views.py" accept-charset="utf-8" name = "write_hashtag" method = "post">
+                    <input type="text" name="hashtag" class="form-control" style="border-radius: 12px">
+                    <!-- input required # 추가? -->
+                </form>
+                <form style="border: 23px none rgb(0,0,0);height: 80%;position: relative;">
+                    <input type="text" class="form-control" style="border-radius: 12px;margin-top: 24px;margin-bottom: 24px;height: 100%;" />
+                </form>
+                <strong><input type='button' class='btn' name='btn' value='저장' style="float: right;padding: 0;"></strong>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
