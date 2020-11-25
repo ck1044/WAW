@@ -19,14 +19,15 @@
     <script type="text/javascript" src="../../static/js/Animated-Typing-With-Blinking.js"></script>
 </head>
 <body>
+{% load static %}
     <!-- 네비게이션 시작 -->
     <div class="nav-s">
         <div class="nav-s1">
-            <a class="a1" href="{% url 'intro_views.html' %}">WAW</a>
-            <a class="a2" href="{% url 'index.html' %}">Home</a>
+            <a class="a1" href="{% url 'waw:aboutUs' %}">WAW</a>
+            <a class="a2" href="{% url 'waw:index' %}">Home</a>
                 <input class="nav-input" type="search">
-            <a href="{% url 'writePost_views.html' %}"><i class="fa fa-pencil-square-o"></i></a>
-            <a class="btn btn-light text-center action-button" role="button" href="{% url 'login_views.html' %}">K</a>
+            <a href="{% url 'waw:write' %}"><i class="fa fa-pencil-square-o"></i></a>
+            <a class="btn btn-light text-center action-button" role="button" href="{% url 'waw:login' %}">K</a>
         </div>
     </div>
     <!-- 네비게이션 끝 -->

@@ -19,3 +19,24 @@ def detail(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
     context = {'post': post}
     return render(request, 'waw/post_detail.html', context)
+
+
+def aboutUS(request):
+    """
+    aboutUs 내용 출력
+    """
+    return render(request, 'waw/post_aboutUs.html')
+
+
+def write(request):
+    """
+    post write
+    """
+    return render(request, 'waw/post_write.html')
+
+
+def login(request):
+    """
+    login page
+    """
+    return render(request, 'waw/login_views.html')
