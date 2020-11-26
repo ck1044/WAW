@@ -7,7 +7,7 @@ def index(request):
     post 리스트 출력
     """
     post_list = Post.objects.order_by("?")
-    context = {'post_list': post_list}
+    context = {'post_list': post_list} # 쿼리셋 {key:value}
     return render(request, 'waw/post_list.html', context)
     # C:/projects/waw/templates/waw/post_list.html
 

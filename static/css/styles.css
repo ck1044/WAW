@@ -130,3 +130,15 @@
     box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
     transition: none;
 }
+
+.container {
+    width: auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+}
