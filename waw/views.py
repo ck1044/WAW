@@ -1,5 +1,6 @@
 from .models import Post
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from .forms import WriteForm
 
 
 def index(request):
@@ -32,7 +33,16 @@ def write(request):
     """
     post write
     """
-    return render(request, 'waw/post_write.html')
+    if request.method == 'POST':
+        form = WriteForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.save()
+            return redirect('waw:index')
+    else:
+        form = WriteForm()
+    context = {'form': form}
+    return render(request, 'waw/post_write.html', context)
 
 
 def login(request):
