@@ -17,6 +17,7 @@
     <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
     <script type="text/javascript" src="../../static/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../static/js/Animated-Typing-With-Blinking.js"></script>
+    <script type="text/javascript" src="../../static/js/masonry.pkgd.min.js"></script>
 </head>
 <body>
 {% load static %}
@@ -31,19 +32,75 @@
     </div>
 </div>
 <!-- 네비게이션 끝 -->
-
-</body>
-{% if post_list %}
-    <div>
-    {% for post in post_list %} <!-- 순회 가능 -->
-        <div class="card">
-
-            <a href="{% url 'waw:detail' post.id %}">{{ post.content }}</a>
-            <a href="waw/?kw={{ post.hash_tag }}">{{ post.hash_tag }}</a>
+<!-- mansonry 시작 -->
+    {% if post_list %}
+        <div class="grid--centered" style="display: block">
+        {% for post in post_list %} <!-- 순회 가능 -->
+            <div class="grid-item">
+                <div style="width: 220px;overflow-wrap: break-word;">
+                    <a style="color: black" href="{% url 'waw:detail' post.id %}">
+                        <p>{{ post.content }}</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="waw/?kw={{ post.hash_tag }}">
+                        <p>{{ post.hash_tag }}</p>
+                    </a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div style="width: 220px;overflow-wrap: break-word;">
+                    <a style="color: black" href="{% url 'waw:detail' post.id %}">
+                        <p>{{ post.content }}</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="waw/?kw={{ post.hash_tag }}">
+                        <p>{{ post.hash_tag }}</p>
+                    </a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div style="width: 220px;overflow-wrap: break-word;">
+                    <a style="color: black" href="{% url 'waw:detail' post.id %}">
+                        <p>{{ post.content }}</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="waw/?kw={{ post.hash_tag }}">
+                        <p>{{ post.hash_tag }}</p>
+                    </a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div style="width: 220px;overflow-wrap: break-word;">
+                    <a style="color: black" href="{% url 'waw:detail' post.id %}">
+                        <p>{{ post.content }}</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="waw/?kw={{ post.hash_tag }}">
+                        <p>{{ post.hash_tag }}</p>
+                    </a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div style="width: 220px;overflow-wrap: break-word;">
+                    <a style="color: black" href="{% url 'waw:detail' post.id %}">
+                        <p>{{ post.content }}</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="waw/?kw={{ post.hash_tag }}">
+                        <p>{{ post.hash_tag }}</p>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
         </div>
-    {% endfor %}
-    </div>
-{% else %}
-    <p>게시물이 없습니다.</p>
-{% endif %}
+    {% else %}
+        <p>게시물이 없습니다.</p>
+    {% endif %}
+</body>
+
 </html>
