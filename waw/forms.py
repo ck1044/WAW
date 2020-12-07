@@ -1,12 +1,18 @@
 from django import forms
+# from .widgets import DatePickerWidget
+
 from .models import Post
 
 
 class WriteForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['hash_tag', 'content']
+        fields = ['date', 'content']
         labels = {
-            'hash_tag': 'hash_tag',
+            'date': 'date',
             'content': 'content',
+            # 'date_write': 'date_write',
         }
+        # widgets = {
+        #     'date_write': DatePickerWidget,
+        # }
