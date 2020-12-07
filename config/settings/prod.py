@@ -1,3 +1,3 @@
 from .base import *
 
-ALLOWED_HOSTS = ['3.34.170.130', 'whoarewe.site']
+ALLOWED_HOSTS = ['127.0.0.1:8000', 'whoarewe.site']
