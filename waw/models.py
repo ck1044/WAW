@@ -6,5 +6,6 @@ class Post(models.Model):
     # date_write = models.DateField()
     content = models.TextField()
     photo = models.ImageField(blank=True)
+    likes = models.ManyToManyField
 
 
